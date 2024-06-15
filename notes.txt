@@ -1,0 +1,71 @@
+1. Content Based Recommendation System :- Past watchings
+2. Popularity Based Recommendation System :- Popular ratings watchers
+3. Collaborative Recommendation System :- Groups people based on kind of similarities and give suggestions based on how similar people like them watched which movies.
+
+
+Project Flow :- 
+Data --> Data Preprocessing --> Feature Extraction --> Similarity score --> user input --> cosine similarity --> list of movies
+
+
+from sklearn.feature_extraction.text import TfidfVectorizer --> Convert textual data to numerical vectors.
+
+from sklearn.metrics.pairwise import cosine_similarity --> Gives similarity score
+
+
+Cosine Similarity:- https://www.geeksforgeeks.org/cosine-similarity/
+
+    Cosine similarity measures the similarity between two vectors of an inner product space. It is measured by the cosine of the angle between two vectors and determines whether two vectors are pointing in roughly the same direction. It is often used to measure document similarity in text analysis.
+
+ In Data Mining, similarity measure refers to distance with dimensions representing features of the data object, in a dataset. If this distance is less, there will be a high degree of similarity, but when the distance is large, there will be a low degree of similarity. Some of the popular similarity measures are –
+
+1. Euclidean Distance.
+2. Manhattan Distance.
+3. Jaccard Similarity.
+4. Minkowski Distance.
+5. Cosine Similarity.
+
+Cosine similarity is a metric, helpful in determining, how similar the data objects are irrespective of their size. We can measure the similarity between two sentences in Python using Cosine Similarity. In cosine similarity, data objects in a dataset are treated as a vector.
+
+S_C(x, y) = (x . y) / (||x|| * ||y||)
+
+Advantages :
+
+A. The cosine similarity is beneficial because even if the two similar data objects are far apart by the Euclidean distance because of the size, they could still have a smaller angle between them. Smaller the angle, higher the similarity.
+
+B. When plotted on a multi-dimensional space, the cosine similarity captures the orientation (the angle) of the data objects and not the magnitude.
+
+
+
+
+TfidfVectorizer :- https://www.kdnuggets.com/2022/09/convert-text-documents-tfidf-matrix-tfidfvectorizer.html#:~:text=Term%20frequency%20Inverse%20document%20frequency,relevant%20words%20in%20the%20document.
+
+    TF-IDF Matrix :- 
+
+Term frequency Inverse document frequency (TFIDF) is a statistical formula to convert text documents into vectors based on the relevancy of the word. It is based on the bag of the words model to create a matrix containing the information about less relevant and most relevant words in the document. 
+
+TF-IDF is particularly useful in NLP tasks, topic modeling, and machine learning tasks. It helps algorithms to use the importance of the words to predict outcomes. 
+ 
+    Term Frequency (TF) :- 
+It is the ratio of the occurrence of the word (w) in document (d) per the total number of words in the documents. With this simple formulation, we are measuring the frequency of a word in the document. 
+
+For example, if the sentence has 6 words and contains two “the”, the TF ratio of this word would be (2/6).
+ 
+Convert Text Documents to a TF-IDF Matrix with tfidfvectorizer
+ 
+
+    Inverse Document Frequency (IDF) :- 
+IDF calculates the importance of a word in a corpus D. The most frequently used words like “of, we, are” have little to no significance. It is calculated by dividing the total number of documents in the corpus by the number of documents containing the word.
+ 
+
+    Term Frequency Inverse Document Frequency (TFIDF) :- 
+ 
+
+TF-IDF is the product of term frequency and inverse document frequency. It gives more importance to the word that is rare in the corpus and common in a document.
+
+
+
+
+Cosine Similarity:- https://www.geeksforgeeks.org/cosine-similarity/
+
+
+TfidfVectorizer :- https://www.kdnuggets.com/2022/09/convert-text-documents-tfidf-matrix-tfidfvectorizer.html#:~:text=Term%20frequency%20Inverse%20document%20frequency,relevant%20words%20in%20the%20document.
